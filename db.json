@@ -40,19 +40,5 @@
       }
     }
   ],
-  "basket": [
-    {
-      "id": 1,
-      "title": "QE",
-      "price": "123",
-      "year": "1231231231",
-      "image": "assets/images/macbook.jpeg",
-      "configure": {
-        "chip": "",
-        "ssd": "",
-        "memory": "",
-        "display": ""
-      }
-    }
-  ]
+  "basket": []
 }
