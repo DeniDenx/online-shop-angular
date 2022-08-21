@@ -1,17 +1,43 @@
 {
   "products": [
     {
+      "id": 1,
       "title": "QE",
-      "price": "",
-      "year": "",
+      "price": "123",
+      "year": "1231231231",
       "image": "assets/images/macbook.jpeg",
       "configure": {
         "chip": "",
         "ssd": "",
         "memory": "",
         "display": ""
-      },
-      "id": 1
+      }
+    },
+    {
+      "id": 2,
+      "title": "MacBook",
+      "price": "123",
+      "year": "312",
+      "image": "assets/images/macbook.jpeg",
+      "configure": {
+        "chip": "",
+        "ssd": "",
+        "memory": "",
+        "display": ""
+      }
+    },
+    {
+      "id": 3,
+      "title": "123",
+      "price": "123",
+      "year": "12123",
+      "image": "assets/images/macbook.jpeg",
+      "configure": {
+        "chip": "",
+        "ssd": "",
+        "memory": "",
+        "display": ""
+      }
     }
   ]
 }

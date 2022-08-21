@@ -30,8 +30,9 @@
   </mat-form-field>
 
 
-  <button class="button" mat-flat-button style="margin-right: 2px" color="primary" type="submit">Добавить Товар</button>
-  <button class="button" mat-flat-button color="primary" (click)="onNoClick()">Отмена</button>
+  <button class="button" mat-flat-button style="margin-right: 2px" color="primary" type="submit">
+    {{isNew ? 'Добавить Товар' : 'Обновить'}}</button>
+  <button class="button" mat-flat-button color="primary" (click)="onNoClick()" type="button">Отмена</button>
 
 
 </form>
