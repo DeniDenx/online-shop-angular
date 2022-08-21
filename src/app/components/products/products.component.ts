@@ -11,13 +11,13 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
+
+  constructor(private ProductsService: ProductsService, public dialog: MatDialog) { }
   products: IProducts[];
   productsSubcription: Subscription;
 
   canEdit: boolean = false;
   canView: boolean = false;
-
-  constructor(private ProductsService: ProductsService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.canEdit = true;
@@ -25,6 +25,10 @@ export class ProductsComponent implements OnInit {
     this.productsSubcription = this.ProductsService.getProducts().subscribe((data) => {
       this.products = data;
     });
+  }
+
+  addToBasket(product: IProducts) {
+    this.ProductsService.postProductToBasket(product).subscribe((data) => console.log(data));
   }
 
   deleteItem(id: number) {
