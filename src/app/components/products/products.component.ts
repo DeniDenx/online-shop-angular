@@ -35,25 +35,10 @@ export class ProductsComponent implements OnInit {
   }
 
   addToBasket(product: IProducts) {
-    if (this.basket) {
-      this.basket.find((item) => {
-        if (item.id = product.id) {
-          product.quantity = + 1;
-          this.ProductsService.updateBasketProduct(product).subscribe((data) => {
-            this.basket = this.basket.map((item) => {
-              if (item.id === data.id) return data;
-              else return item;
-            });
-          });
-        }
-      });
-    } else {
-      product.quantity = 1;
-      this.ProductsService.postProductToBasket(product).subscribe((data) =>
-        this.basket.push(data)
-      );
-    }
-
+    product.quantity = 1;
+    this.ProductsService.postProductToBasket(product).subscribe((data) =>
+      this.basket.push(data)
+    );
   }
 
   deleteItem(id: number) {
