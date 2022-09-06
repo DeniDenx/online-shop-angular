@@ -36,9 +36,24 @@ export class ProductsComponent implements OnInit {
 
   addToBasket(product: IProducts) {
     product.quantity = 1;
+    let findItem;
+
+    if (this.basket.length > 0) {
+      findItem = this.basket.find((item) => item.id === product.id);
+      if (findItem) this.updateToBasket(findItem);
+      else this.postToBasket(product);
+    } else this.postToBasket(product);
+  }
+
+  postToBasket(product: IProducts) {
     this.ProductsService.postProductToBasket(product).subscribe((data) =>
       this.basket.push(data)
     );
+  }
+
+  updateToBasket(product: IProducts) {
+    product.quantity += 1;
+    this.ProductsService.updateProductToBasket(product).subscribe((data) => { });
   }
 
   deleteItem(id: number) {

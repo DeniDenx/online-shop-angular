@@ -5,7 +5,7 @@ export interface IProducts {
   year: string,
   image?: string,
   configure: IProductsConfig;
-  quantity?: number;
+  quantity: number;
 }
 
 export interface IProductsConfig {
