@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
@@ -15,15 +15,15 @@ export class DialogBoxComponent implements OnInit {
     if (this.data) this.isNew = false;
   }
 
-  myForm: FormGroup = new FormGroup({
-    id: new FormControl(this.data?.id ?? null),
-    title: new FormControl(this.data?.title ?? ''),
-    price: new FormControl(this.data?.price ?? ''),
-    year: new FormControl(this.data?.year ?? ''),
-    chip: new FormControl(this.data?.chip ?? ''),
-    ssd: new FormControl(this.data?.ssd ?? ''),
-    memory: new FormControl(this.data?.memory ?? ''),
-    display: new FormControl(this.data?.display ?? ''),
+  myForm: UntypedFormGroup = new UntypedFormGroup({
+    id: new UntypedFormControl(this.data?.id ?? null),
+    title: new UntypedFormControl(this.data?.title ?? ''),
+    price: new UntypedFormControl(this.data?.price ?? ''),
+    year: new UntypedFormControl(this.data?.year ?? ''),
+    chip: new UntypedFormControl(this.data?.chip ?? ''),
+    ssd: new UntypedFormControl(this.data?.ssd ?? ''),
+    memory: new UntypedFormControl(this.data?.memory ?? ''),
+    display: new UntypedFormControl(this.data?.display ?? ''),
   });
 
   isNew: boolean = true;
