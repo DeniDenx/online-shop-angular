@@ -57,12 +57,10 @@ export class ProductsComponent implements OnInit {
   }
 
   deleteItem(id: number) {
-    this.ProductsService.deleteProduct(id).subscribe(() => this.products.find((item) => {
-      if (id === item.id) {
-        let idx = this.products.findIndex((data) => data.id === id);
-        this.products.splice(idx, 1);
-      }
-    }));
+    this.ProductsService.deleteProduct(id).subscribe(() => {
+      let idx = this.products.findIndex((item) => id === item.id);
+      this.products.splice(idx, 1);
+    });
   }
 
 
@@ -83,7 +81,7 @@ export class ProductsComponent implements OnInit {
       }
 
     });
-  }
+  };
 
   postData(data: IProducts) {
     this.ProductsService.postProduct(data).subscribe((data) => this.products.push(data));
