@@ -29,21 +29,8 @@
     {
       "id": 3,
       "title": "123",
-      "price": "123",
+      "price": "5",
       "year": "12123",
-      "image": "assets/images/macbook.jpeg",
-      "configure": {
-        "chip": "",
-        "ssd": "",
-        "memory": "",
-        "display": ""
-      }
-    },
-    {
-      "id": 4,
-      "title": "",
-      "price": "123",
-      "year": "",
       "image": "assets/images/macbook.jpeg",
       "configure": {
         "chip": "",
@@ -66,7 +53,21 @@
         "memory": "",
         "display": ""
       },
-      "quantity": 6
+      "quantity": 7
+    },
+    {
+      "id": 3,
+      "title": "123",
+      "price": "123",
+      "year": "12123",
+      "image": "assets/images/macbook.jpeg",
+      "configure": {
+        "chip": "",
+        "ssd": "",
+        "memory": "",
+        "display": ""
+      },
+      "quantity": 5
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { ProductResolver } from './services/product.resolver';
+import { productResolver } from './services/product.resolver';
 import { BasketComponent } from './components/basket/basket.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { ProductsComponent } from './components/products/products.component';
@@ -9,7 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: '', component: BaseComponent },
   { path: 'products', component: ProductsComponent },
-  { path: 'product/:id', component: ProductDetailsComponent, resolve: { data: ProductResolver } },
+  { path: 'product/:id', component: ProductDetailsComponent, resolve: { data: productResolver } },
   { path: 'basket', component: BasketComponent },
 
   { path: "**", redirectTo: "", component: BaseComponent }
